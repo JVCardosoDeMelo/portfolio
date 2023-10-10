@@ -1,0 +1,30 @@
+ @import url('https://fonts.googleapis.com/css2?family=AR+One+Sans&family=Montserrat&family=Open+Sans:wght@300;400&display=swap');
+
+ *{
+    padding:0;
+    margin: auto;
+    text-decoration: none;
+    box-sizing: border-box;
+ }
+
+ body{
+    max-width: 1300px;
+    margin: 0;
+ }
+
+ header {
+    background: rgb(0,181,223);
+    background: linear-gradient(90deg, rgba(0,181,223,1) 0%, rgba(0,212,255,1) 100%, rgba(2,0,36,1) 100%, rgba(15,248,254,1) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+ }
+
+ header h1{
+    color: darkblue;
+ }
+
+ header span{
+    color: darkorchid;
+ }
