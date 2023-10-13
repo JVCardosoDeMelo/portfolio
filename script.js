@@ -13,6 +13,9 @@ const titulo = document.querySelector('.digitando');
 digitar(titulo);
 
 const menu = document.querySelector('.fa-bars');
+const nav = document.querySelector('header .nav-1');
+
 menu.addEventListener('click',()=>{
     menu.classList.toggle('fa-x')
+    nav.classList.toggle('ativado')
 })
