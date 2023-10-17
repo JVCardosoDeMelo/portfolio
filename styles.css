@@ -3,9 +3,11 @@
 
  *{
     padding:0;
-    margin: auto;
     text-decoration: none;
     box-sizing: border-box;
+    justify-content: center;
+    list-style-type: none;
+
  }
 
  body{
@@ -14,6 +16,7 @@
  }
 
  header {
+  margin-top: 5px;
     background: #060606;
     display: flex;
     align-items: center;
@@ -26,6 +29,7 @@
     font-family:'AR One Sans' ;
     font-weight: bold;
     font-size: 3rem;
+    margin-top: auto;
  }
 
  header span{
@@ -37,7 +41,7 @@
 
  header .nav-1{
    display: flex;
-   gap:30px;
+   gap:20px;
    align-items: center;
    list-style-type: none;
  }
@@ -110,10 +114,11 @@
  }
 
  .circle {
+  margin-left: 70px;
    background-color: #aaa;
    border-radius: 50%;
-   width: 25rem;
-   height: 25rem;
+   width: 30rem;
+   height: 30rem;
    overflow: hidden;
    position: relative;
  }
@@ -121,7 +126,7 @@
  .circle img {
    position: absolute;
    bottom: 0;
-   width: 100%;
+   width: 100%;;
  }
 
  @keyframes iniciar{
@@ -164,16 +169,17 @@
   margin-top: 5rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 3rem;
+  gap: 2rem;
   justify-content: center;
   padding: 3.5rem;
  }
 
  .sobre-titulo{
-  margin: 3rem;
+  margin: 1rem;
   grid-column: 1/-1;
   text-align: center;
   color: #bdbdcf;
+  font-family: 'Young Serif', serif;
  }
 
  .sobre-titulo h1{
@@ -188,6 +194,7 @@
   margin-bottom:1rem;
   font-size: 1.4rem;
   position: relative;
+  font-family: 'Young Serif', serif;
  }
 
  .sobre-titulo div{
@@ -297,6 +304,11 @@
   header .nav-1{
     display: none;
   }
+
+  header{
+    justify-content: space-between;
+    padding: 30px 70px;
+  }
   header i{
     color: aliceblue;
     font-size: 2rem;
@@ -304,7 +316,7 @@
   header .nav-1.ativado{
     display: grid;
     position: absolute;
-    background:gray;
+    background:rgb(57, 54, 54);
     top: 80px;
     color: white;
     z-index: 5;
@@ -312,6 +324,7 @@
     font-size: 1.6rem;
     border-radius: 0 0 4px 4px;
     animation: secao .8s ease-in-out forwards;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
   }
 
@@ -349,6 +362,7 @@
   align-items: center;
   justify-content: center;
   list-style: none;
+  font-family: 'Young Serif', serif;
  }
 
  .meus-serviços ul li{
@@ -420,3 +434,118 @@
   border-bottom: 2px solid cyan;
   border-left: 2px solid cyan;
  }
+
+ .resumo-generico{
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: white;
+  justify-content: center;
+  gap: 10px;
+  align-items: start;
+ }
+
+ .resumo-generico h2{
+  font-family: 'AR One Sans';
+  font-size: 1.5rem;
+  background-color: #067ca0;
+  justify-self: start;
+  padding: 10px;
+  border-radius: 3px;
+ }
+
+ .resumo-generico h2 i{
+  margin-right: 10px;
+ }
+
+ .educacao {
+  margin-top: 30px;
+  grid-column: 2;
+  grid-row: 1;
+ }
+
+ .experiencia {
+  margin-bottom: 30px;
+  grid-column: 1;
+  grid-row: 1;
+ }
+
+ .experiencia-content ul{
+  color: rgb(13, 182, 182);
+  gap:10px;
+  display: flex;
+  cursor: pointer;
+  margin-top: 20px;
+  justify-content: center;
+ }
+
+ .resumo-generico .experiencia-content div{
+  background-color: #222;
+  padding: 40px;
+  position: relative;
+ }
+
+ .resumo-generico .experiencia-content div::before{
+  content: '';
+  border-right: 30px solid transparent;
+  border-bottom: 30px solid #222;
+  position: absolute;
+  top: -20px;
+  left: 30px;
+  display: inline-block;
+ }
+
+ .resumo-generico .experiencia-content div span{
+  color: #067ca0;
+  font-family: 'Ar One Sans';
+ }
+
+ .resumo-generico .experiencia-content div h3{
+  font-family: 'Ar One Sans' ;
+  margin: 10px 0;
+}
+
+.resumo-generico .experiencia-content div p{
+  color: #707070;
+  font-size: 1.1rem;
+}
+
+.resumo-generico .educacao-content div{
+  background-color: #222;
+  padding: 40px;
+  position: relative;
+ }
+
+ .educacao-content ul{
+  color: rgb(13, 182, 182);
+  gap:10px;
+  display: flex;
+  cursor: pointer;
+  margin-top: 20px;
+  justify-content: center;
+ }
+
+ .resumo-generico .educacao-content div::before{
+  content: '';
+  border-right: 30px solid transparent;
+  border-bottom: 30px solid #222;
+  position: absolute;
+  top: -20px;
+  left: 30px;
+  display: inline-block;
+ }
+
+ .resumo-generico .educacao-content div span{
+  color: #067ca0;
+  font-family: 'Ar One Sans';
+ }
+
+ .resumo-generico .educacao-content div h3{
+  font-family: 'Ar One Sans' ;
+  margin: 10px 0;
+}
+
+.resumo-generico .educacao-content div p{
+  color: #707070;
+  font-size: 1.1rem;
+}
