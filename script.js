@@ -25,6 +25,8 @@ menu.addEventListener('click',()=>{
 });
 }
 
+menuMobol();
+
 function sobremim(){
 
   const divexperiencia = document.querySelectorAll('.experiencia-content div');
@@ -72,3 +74,8 @@ lieducacao.forEach((evento,index) =>{
 }
 
 sobremim();
+
+
+const listaall = document.querySelectorAll('.projetos-armazenamento ul li');
+const botaogeral = document.querySelector('.projetos-navegacao ul li');
+const botaoall = document.querySelector('.modelos-projetos .all')
