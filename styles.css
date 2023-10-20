@@ -1,6 +1,12 @@
  @import url('https://fonts.googleapis.com/css2?family=AR+One+Sans&family=Montserrat&family=Open+Sans:wght@300;400&display=swap');
  @import url('https://fonts.googleapis.com/css2?family=AR+One+Sans&family=Montserrat&family=Open+Sans:wght@300;400&family=Young+Serif&display=swap');
 
+
+ :root {
+  --min-desktop: 1024px;
+  --min-tablet: 640px;
+}
+
  *{
     padding:0;
     text-decoration: none;
@@ -8,6 +14,10 @@
     justify-content: center;
     list-style-type: none;
 
+ }
+
+ html {
+  max-width: 100vw;
  }
 
  body{
@@ -136,6 +146,19 @@
    position: absolute;
    bottom: 0;
    width: 100%;;
+ }
+
+ @media screen and (max-width: 1024px) {
+  .circle {
+    width: 100%;
+    height: auto;
+    grid-column: 1 / span 3;
+    margin: 0;
+   }
+   
+   .circle img {
+
+   }
  }
 
  @keyframes iniciar{
@@ -275,6 +298,15 @@
   font-size: 1rem;
  }
 
+ @media screen and (max-width: 1024px) {
+  .sobre-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: start;
+  }
+ }
+
  @keyframes secao{
   from{
     transition: .5s;
@@ -288,67 +320,78 @@
  /* Versão mobile */
 
 
- @media(max-width: 992px) {
+ @media screen and (max-width: 1024px) {
+
+  body {
+    max-width: 100vw;
+  }
+
   .secao img {
     display: none;
   }
-  
+  .secao{
+    padding: 15px;
+  }
+
+ header h1{
+  font-size: 1.3em;
+ }
+
+ header span{
+  font-size: 1.3rem;
+ }
+
   header{
     justify-content: space-between;
-    padding: 30px 70px;
+    padding: 25px 50px;
   }
-  .secao {
-    background-image: url(images/jv.png);
-    background-repeat: no-repeat;
-    background-position: right;
-  }
+ 
   .secao h2{
     color: aqua;
   }
 
-  .secao div p{
-    color: rgb(56, 225, 9);
-    font-weight: 300;
-  }
-
+  
   header .nav-1{
     display: none;
   }
 
-  header{
-    justify-content: space-between;
-    padding: 30px 70px;
-  }
+ 
   header i{
     color: aliceblue;
     font-size: 2rem;
   }
   header .nav-1.ativado{
-    display: grid;
-    position: absolute;
-    background:rgb(57, 54, 54);
-    top: 80px;
-    color: white;
-    z-index: 5;
-    padding: 30px;
-    font-size: 1.6rem;
-    border-radius: 0 0 4px 4px;
+    background-color: rgb(43, 42, 42);
+        position: absolute;
+        display: grid;
+        top: 80px;
+        color: white;
+        z-index: 1;
+        padding: 30px;
+        font-size: 1.6rem;
+        font-weight: bold;
+        border-radius: 0 0 4px 4px;
+        right: 20px;
     animation: secao .8s ease-in-out forwards;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
   }
 
+  .secao{
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
 
 }
 
- @media(max-width: 992px) {
+ @media screen and (max-width: 1024px) {
       .sobre img {
         grid-column: 1/-1;
         justify-self: center;
       }
 
       .sobre-conteudo{
-        max-width: 50%;
         grid-column: 1/-1;
 
       }
@@ -360,10 +403,16 @@
   background-color: #111;
 }
 
- .meus-serviços{
+.secao{
+  margin-top: -30px;
   padding: 60px;
+  background-color: #111;
+}
+
+ .meus-serviços{
   color: white;
  }
+ 
 
  .meus-serviços ul{
   display: flex;
@@ -587,11 +636,11 @@
  .cursos {
   margin-top: 50px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 40% 60%;
   align-items: start;
   padding: 30px;
   gap: 30px;
-  justify-content: center;
+  justify-items: center;
  }
 
  .minha-skill{
@@ -630,10 +679,42 @@
  }
 
  .curiosidades{
-  grid-column: 3/-1;
+  grid-column: 2/-1;
   grid-row: 1;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  justify-self: left;
+ }
+
+ .curiosidades ul{
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column: 1 / span 2;
+  width: 100%;
+}
+ 
+.curiosidades  ul li{
+  background-color: #222;
+  border: 3px solid #0e0e0f;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-self: start;
+  height: 250px;
+  padding: 1em;
+}
+
+ @media screen and (max-width: 1024px) {
+  .curiosidades ul{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .curiosidades ul li{
+    width: 90%;
+    margin: 0 auto;
+  }
  }
 
  .curiosidades h2{
@@ -650,22 +731,6 @@
  .curiosidades h2 i{
   padding-right: 10px;
 
-}
-
-.curiosidades ul{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap:30px
-}
-
-.curiosidades  ul li{
-  background-color: #222;
-  border: 3px solid #0e0e0f;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-self: start;
-  width: 400px;
-  height: 250px;
 }
 
 .curiosidades  ul li i{
@@ -689,7 +754,9 @@
   font-family: 'Ar One Sans';
  }
 
- @media (max-width: 1089px){
+
+ 
+ @media screen and (max-width: 1024px){
   .resumo-generico .experiencia-content, .educacao-content{
     justify-self: center;
     grid-column: 1/-1;
@@ -697,9 +764,10 @@
 
   .resumo-generico .educacao {
     grid-column: 1/-1;
+    margin-top: 30px;
     grid-row: 3;
+    text-align: center;
     justify-self: center;
-    margin: 30px 0;
   }
   .resumo-generico .experiencia{
     grid-column: 1/-1;
@@ -733,6 +801,8 @@
     justify-self: center;
     grid-column: 1/-1;
   }
+
+  
  }
  
  .projetos{
@@ -825,6 +895,23 @@
   }
  }
 
+@media screen and (max-width:1024px) {
+  .projetos p{
+     font-size: 1rem;
+  }
+  
+  .projetos-armazenamento ul{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .projetos-armazenamento ul li{
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+
  footer {
   background-color: #000000;
   padding: 30px;
@@ -887,4 +974,11 @@ footer .footer_comercial {
 .link img{
   justify-content: center;
   text-align: center;
+}
+
+@media screen and(max-width:1024px) {
+  footer h1{
+   font-size:1rem;
+  }
+  
 }
