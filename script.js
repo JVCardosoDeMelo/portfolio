@@ -77,5 +77,64 @@ sobremim();
 
 
 const listaall = document.querySelectorAll('.projetos-armazenamento ul li');
-const botaogeral = document.querySelector('.projetos-navegacao ul li');
-const botaoall = document.querySelector('.modelos-projetos .all')
+const botaogeral = document.querySelectorAll('.projetos-navegacao li');
+const botaoall = document.querySelector('.modelos-projetos .todos');
+
+listaall.forEach((item)=>{
+    item.classList.add('ativo')
+} )
+
+function removeClick(index){
+   botaogeral.forEach((item)=>{
+     item.classList.remove('ativo')
+   });
+   botaogeral[index].classList.add('ativo')
+}
+
+botaogeral.forEach((event,index)=>{
+    event.addEventListener('click' , ()=>{
+        removeClick(index);
+    })
+})
+
+function showlist(lista, buttom = "todos"){
+    lista.forEach((item)=>{
+        item.classList.remove('ativo')
+    })
+    if(buttom == 'react'){
+        lista[0].classList.add('ativo');
+        lista[1].classList.add('ativo');
+        lista[2].classList.add('ativo');
+        lista[5].classList.add('ativo');
+
+    }
+    
+    if(buttom == 'html-css'){
+        lista[3].classList.add('ativo');
+        lista[4].classList.add('ativo');
+    }
+
+    if(buttom == 'todos'){
+        lista[0].classList.add('ativo');
+        lista[1].classList.add('ativo');
+        lista[2].classList.add('ativo');
+        lista[3].classList.add('ativo');
+        lista[4].classList.add('ativo');
+        lista[5].classList.add('ativo');
+    }
+}
+
+botaogeral.forEach((item) =>{
+    item.addEventListener('click' , (e)=>{
+         let currentbutton = e.target;
+         if(currentbutton.classList.contains('todos')) {
+            showlist(listaall);
+         }
+         if(currentbutton.classList.contains('react')) {
+            showlist(listaall , "react");
+         }
+         if(currentbutton.classList.contains('html-css')) {
+            showlist(listaall ,"html-css");
+         }
+        })
+})

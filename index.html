@@ -23,7 +23,7 @@
             </nav>
             
     </header>
-    <section class="secao">
+    <section id ="home" class="secao">
         <div>
             <h2>Olá! me chamo João Vitor e sou</h2>
             <h2 class="digitando">Desenvolvedor Front-end</h2>
@@ -33,7 +33,7 @@
                 atras de aprendizados e experiencias. Atuando como dev free-lancer, utilizo as tecnologias de 
                 HTML,CSS,Javascript,Typescript,React.js,Git & Github e Node, aproveite a visita!
             </p>
-            <a href="#">Baixar Curriculo</a>
+            <a href="JOAO VITOR CARDOSO DE MELO.pdf " download="curriculo">Baixar Curriculo</a>
         </div>
         <img class ="circle"src="images/jv.png" alt="Foto de João Vitor" />
     </section>
@@ -49,7 +49,7 @@
             </div>
         </div>
         <img    class="circle"    src="/images/jv.png"/>
-        <div class="sobre-conteudo">
+        <div  id="sobremim" class="sobre-conteudo">
             <div class="sobre-texto">
                 <h1>Sou Desenvolvedor Front-end, João Vitor </h1>
                 <p>Nativo de Fortaleza, sempre fui uma pessoa interessada pela tecnologia, seja jogando videogames e me perguntando como eram feitos 
@@ -73,9 +73,9 @@
         </article>
     </main>
     <section class="services">
-        <div class="sobre-titulo">
-            <h1>Sobre mim</h1>
-            <p>Resumo sobre minha trajetoria </p>
+        <div id ="curriculo" class="sobre-titulo">
+            <h1>Curriculo</h1>
+            <p>Habilidades que disponho</p>
             <div>
                 <span></span>
                 <span></span>
@@ -108,7 +108,7 @@
     </section>
     <div class="resumo">
         <div class="sobre-titulo">
-            <h1>Resumo</h1>
+            <h1>Qualificações</h1>
             <p>Resumo sobre minhas experiencias,qualificações e habilidades </p>
             <div>
                 <span></span>
@@ -255,8 +255,8 @@
                 </div>
            </div>
     </div>
-    <section class="projetos">
-      <div class="sobre-titulo">
+    <section  id ="portfolio" class="projetos">
+      <div  class="sobre-titulo">
           <h1>Meus projetos</h1>
           <p>Alguns projetos que desenvolvi ao longo da carreira.</p>
           <div>
@@ -265,7 +265,7 @@
             <span></span>
           </div>
           <div class="modelos-projetos">
-            <ul class="projeto-navegacao">
+            <ul class="projetos-navegacao">
                 <li class="todos">Todos</li>
                 <li class="react">React</li>
                 <li class="html-css">Html + css</li>
@@ -273,17 +273,31 @@
           </div>
           <div class="projetos-armazenamento">
             <ul>
-                <li id="react"><img src="images/ImagensProje/Blog.jpeg " alt="Site simulando um blog pessoal"></li>
-                <li id="react"><img src="images/ImagensProje/Busca cep.jpg " alt="Site para busca de endereço com ceps"></li>
-                <li id="react"><img src="images/ImagensProje/Filmes.jpg " alt="Site para busca de filmes "></li>
-                <li id="html-css"><img src="images/ImagensProje/Livros.jpeg" alt="Site para serviço de livros"></li>
-                <li id="html-css><img src="images/ImagensProje/Numero random.jpg" alt="Jogo para descobrir numero"></li>
-                <li id="react"><img src="images/ImagensProje/Times.jpg" alt="Site criando cards de equipes"></li>
+                <li id="react"><a class="link" href="https://ola-mundo-ruddy.vercel.app/"><img src="images/ImagensProje/Blog.jpeg " alt="Site simulando um blog pessoal"><p>Simulação de um Blog.</p></a></li>
+                <li id="react"><a class="link" href="https://busca-cep-em-react.vercel.app/"><img src="images/ImagensProje/Busca cep.jpg " alt="Site para busca de endereço com ceps"><p>Site para busca de endereços.</p></a></li>
+                <li id="react"><a class="link" href="https://buscacine1.vercel.app/"><img src="images/ImagensProje/Filmes.jpg " alt="Site para busca de filmes "><p>Site para busca de filmes.</p></a></li>
+                <li id="html-css"><a class="link" href="https://vercel.com/jvcardosodemelo/alurabooks"><img src="images/ImagensProje/Livros.jpeg" alt="Site para serviço de livros"><p>Loja de livros.</p></a></li>
+                <li id="html-css"><a class="link" href="https://numero-secreto-zeta-jade.vercel.app/"><img src="images/ImagensProje/Numero random.jpg" alt="Jogo de numero"><p>Jogo com comando de voz.</p></a></li>
+                <li id="react"><a class="link" href="https://vercel.com/jvcardosodemelo/organograma"><img src="images/ImagensProje/grupodec.png" alt="Site criando cards de equipes"><p>Site para criar Times e membros.</p></a></li>
             </ul>
           </div>
       </div>
-      <a href="#">Saiba mais sobre os projetos</a>
+      <a  href="https://github.com/JVCardosoDeMelo">Saiba mais sobre os projetos</a>
     </section>
+    <footer id="contato">
+        <div class="sobre-titulo">
+            <h1>Desenvolvedor Front End</h1>
+            <p>Quer falar comigo sobre algum projeto? Aqui estão minhas redes sociais!</p>
+        </div>
+        <nav aria-label="navegação de links sociais">
+            <ul class="footer_sociais">
+                <li><a href="//www.linkedin.com/in/joao-vitor-cardoso-37ab67257/"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                <li><a href="//www.instagram.com/jvitorcmelo/"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="//github.com/JVCardosoDeMelo"><i class="fa-brands fa-github-alt"></i></a></li>
+            </ul>
+        </nav>
+        <p class="footer_comercial">Todos os direitos reservados Desenvolvedor Front-end &copy; - 2023</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
